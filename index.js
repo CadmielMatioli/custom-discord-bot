@@ -17,15 +17,6 @@ for(const file of commandFiles) {
 }
 
 client.on('message', async message => {
-  // if (message.content.startsWith(`${prefix}channel`)) { 
-  //   var data = fs.readFileSync('channel.txt');
-  //   message.channel.send(data.toString())
-  // }
-  // if (message.content.startsWith(`${prefix}channelothermethod`)) { 
-  //   var data =fs.readFileSync('channel.txt', (error, txtString) => {
-  //       message.channel.send(txtString.toString())
-  //   })
-  // }
   if (message.content.startsWith(`${prefix}channelid`)) {
     let file_name = `${message.content.split(' ')[0].replace(prefix, '')}.js`;
     if(!fs.existsSync('./commands/' + file_name)) return undefined;
