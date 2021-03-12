@@ -16,6 +16,7 @@ for(const file of commandFiles) {
   client.commands.set(command.name, command);
 }
 
+
 client.on('message', async message => {
   if (message.content.startsWith(`${prefix}channelid`)) {
     let file_name = `${message.content.split(' ')[0].replace(prefix, '')}.js`;
